@@ -20,7 +20,15 @@ class SortedList {
     }
   }
 
-  max() {}
+  max() {
+    if (this.items.length < 1) {
+      throw new Error('EmptySortedList');
+    } else {
+      let array = this.items;
+      let largest = Math.max.apply(Math, array);
+      return largest;
+    }
+  }
 
   min() {}
 
