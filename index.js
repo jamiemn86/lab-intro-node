@@ -30,7 +30,15 @@ class SortedList {
     }
   }
 
-  min() {}
+  min() {
+    if (this.items.length < 1) {
+      throw new Error('EmptySortedList');
+    } else {
+      let array = this.items;
+      let lowest = Math.min.apply(Math, array);
+      return lowest;
+    }
+  }
 
   sum() {}
 
